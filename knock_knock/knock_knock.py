@@ -1,22 +1,18 @@
 class KnockKnock:
-    def react_to_user(self):
-        while True:
-            user_input = input("> ")
-            if "Who" in user_input:
-                print("Cow")
-                break
-            if "Cow" in user_input:
-                print("Cow don't whoo, cow moo! :-D")
-                break
-            
-            
+    
     def decider(self):
         while True:
-            first_input = input("> ").upper()
-            if first_input == "NO":
+            user_input = input("> ").lower()
+            if user_input == "no":
                 print("Sorry to hear... :-(")
                 break
+            elif user_input == "yes":
+                print("Great.\nKnock knock!?!")
+    
+            elif "there" in user_input.lower():
+                print("Cow")
+            elif "cow" in user_input.lower():
+                print("Cow don't who cow moo.")
+                break
             else:
-                print("Great!\n'Knock knock!?!'")
-                self.react_to_user()
-
+                print("Pleas repeat your question...")
